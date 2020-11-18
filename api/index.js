@@ -4,20 +4,22 @@ const datos = require("./datos.json")
 module.exports = (req, res) => {
 	//const { name = 'WORDL' } = req.body
 	//res.status(200).send(`Hello ${name} `)
-	var empty = {}
-	var result = req.query
 
 	if( Object.keys(req.query).length == 1 ){
-		result = "Si hay parametros"
+		
+		const { ccaa } = req.query
+		result = datos.filter(it => it.ccaa === ccaa )[0]
+
+		if ( result == undefined )
+			result = "Esa comunidad autónoma no existe";
+
 	}else{
-		result = "No has indicado el parametro o no es el formato indicado: /api/<CCAA>"
+		result = "No has indicado el parametro o no es el formato indicado: /api?ccaa=Granada"
 	}
 
-console.log(result)
 	res.json({
 		body: result.toString(),
 		query: req.query,
 	})
-
 
 }
