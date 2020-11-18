@@ -18,7 +18,7 @@ module.exports = (req, res) => {
 	}
 
 	res.json({
-		body: result.toString(),
+		body: ccaa.toString(),
 		query: req.query,
 	})
 
