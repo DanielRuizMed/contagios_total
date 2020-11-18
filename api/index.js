@@ -16,7 +16,7 @@ module.exports = (req, res) => {
 console.log(result)
 	res.json({
 		body: result.toString(),
-		query: req.query,
+		query: Object.keys(req.query).length,
 	})
 
 
