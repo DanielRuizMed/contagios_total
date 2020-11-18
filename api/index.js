@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
 	var result = req.query
 
-	if( result[0] != undefined ){
+	if( result != "" ){
 		result = "Si hay parametros"
 	}else{
 		result = "No hay parametros"
