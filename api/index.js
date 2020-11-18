@@ -1,4 +1,4 @@
-const datos = require("datos.json")
+const datos = require("./datos.json")
 
 //funcion handler
 module.exports = (req, res) => {
