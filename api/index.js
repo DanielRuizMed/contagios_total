@@ -9,7 +9,7 @@ module.exports = (req, res) => {
 		
 		result = datos.filter(it => it.ccaa === req.query.ccaa )
 
-		if ( result == undefined )
+		if ( result[0] == undefined )
 			result = "Esa comunidad autónoma no existe";
 
 	}else{
@@ -17,7 +17,7 @@ module.exports = (req, res) => {
 	}
 
 	res.json({
-		body: result.toString(),
+		body: result[0],
 		query: req.query,
 	})
 
