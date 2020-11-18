@@ -4,11 +4,19 @@
 module.exports = (req, res) => {
 	//const { name = 'WORDL' } = req.body
 	//res.status(200).send(`Hello ${name} `)
-console.log(req.query)
+
+	var result = req.query
+
+	if( result[0] ){
+		result = "Si hay parametros"
+	}else{
+		result = "No hay parametros"
+	}
+
+console.log(result)
 	res.json({
-		body: req.body,
+		body: result.toString(),
 		query: req.query,
-		cookies: req.cookies,
 	})
 
 
