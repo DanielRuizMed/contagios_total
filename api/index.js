@@ -7,8 +7,7 @@ module.exports = (req, res) => {
 
 	if( Object.keys(req.query).length == 1 ){
 		
-		const { ccaa } = req.query
-		result = datos.filter(it => it.ccaa === ccaa )[0]
+		result = datos.filter(it => it.ccaa === req.query["ccaa"] )[0]
 
 		if ( result == undefined )
 			result = "Esa comunidad autónoma no existe";
@@ -18,7 +17,7 @@ module.exports = (req, res) => {
 	}
 
 	res.json({
-		body: ccaa.toString(),
+		body: result.toString(),
 		query: req.query,
 	})
 
