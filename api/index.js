@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
 	var result = req.query
 
-	if( !isEmpty(result) ){
+	if( Object.entries(result).length === 0 && result.constructor === Object ){
 		result = "Si hay parametros"
 	}else{
 		result = "No hay parametros"
