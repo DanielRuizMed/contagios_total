@@ -4,10 +4,10 @@
 module.exports = (req, res) => {
 	//const { name = 'WORDL' } = req.body
 	//res.status(200).send(`Hello ${name} `)
-
+	var empty = {}
 	var result = req.query
 
-	if( Object.entries(result).length === 0 && result.constructor === Object ){
+	if( result != empty ){
 		result = "Si hay parametros"
 	}else{
 		result = "No hay parametros"
