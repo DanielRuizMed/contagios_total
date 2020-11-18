@@ -13,7 +13,7 @@ module.exports = (req, res) => {
 			result = "Esa comunidad autónoma no existe";
 
 	}else{
-		result = "No has indicado el parametro o no es el formato indicado: /api?ccaa=Granada"
+		result = "No has indicado el parametro o no es el formato indicado: /api?ccaa=Andalucía"
 	}
 
 	res.json({
