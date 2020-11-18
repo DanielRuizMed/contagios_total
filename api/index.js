@@ -1,4 +1,4 @@
-//const datos = require(datos.js)
+const datos = require(datos.json)
 
 //funcion handler
 module.exports = (req, res) => {
@@ -7,16 +7,16 @@ module.exports = (req, res) => {
 	var empty = {}
 	var result = req.query
 
-	if( result != empty ){
+	if( Object.keys(req.query).length == 1 ){
 		result = "Si hay parametros"
 	}else{
-		result = "No hay parametros"
+		result = "No has indicado el parametro o no es el formato indicado: /api/<CCAA>"
 	}
 
 console.log(result)
 	res.json({
 		body: result.toString(),
-		query: Object.keys(req.query).length,
+		query: req.query,
 	})
 
 
