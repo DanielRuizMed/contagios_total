@@ -9,8 +9,10 @@ module.exports = function handler(req, res) {
 		result = datos.filter(it => it.ccaa === req.query.ccaa )[0]
 		estado = 200
 
-		if ( result == undefined )
-			result = "Esa comunidad autónoma no existe";
+		if ( result == undefined ){
+			result = "Esa comunidad autonoma no existe";
+			estado = 400
+		}
 
 	}else{
 		result = "No has indicado el parametro o no es el formato indicado: /api?ccaa=Andalucía"

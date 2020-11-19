@@ -15,11 +15,11 @@ it('1.1 api?ccaa=Andalucía (provincia que si existe)', (done) => {
 
 });
 
-it('1.1 api?ccaa=Andalucía (provincia que si existe)', (done) => {
-    chai.request(url).get('?ccaa=Andalucia').end(function(err,res){
+it('1.2 api?ccaa=noexiste (provincia que no existe)', (done) => {
+    chai.request(url).get('?ccaa=noexiste').end(function(err,res){
 
-        expect(res.body).to.have.property('ccaa').to.equal("Andalucia");
-        expect(res).to.have.status(200);
+        expect(res.body).to.have.equal('Esa comunidad autonoma no existe');
+        //expect(res).to.have.status(400);
         done();
     })
 
