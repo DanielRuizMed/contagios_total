@@ -3,16 +3,16 @@
         "ccaa":"Ceuta",
 	"numero": "2.533"
     },
-    { 	"ccaa":"C. León",
+    { 	"ccaa":"C. Leon",
 	"numero": "109.973"
     },
-    { 	"ccaa":"País Vasco",
+    { 	"ccaa":"Pais Vasco",
 	"numero": "88.109"
     },
     { 	"ccaa":"La Rioja",
 	"numero": "15.381"
     },
-    { 	"ccaa":"Aragón",
+    { 	"ccaa":"Aragon",
 	"numero": "69.196"
     },
     { 	"ccaa":"Murcia",
@@ -24,11 +24,8 @@
     { 	"ccaa":"Asturias",
 	"numero": "19.414"
     },
-    { 	"ccaa":"Andalucía",
+    { 	"ccaa":"Andalucia",
 	"numero": "202.491"
-    },
-    { 	"ccaa":"Cataluña",
-	"numero": "285.993"
     },
     { 	"ccaa":"Madrid",
 	"numero": "334.655"
