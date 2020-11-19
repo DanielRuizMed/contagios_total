@@ -1,0 +1,25 @@
+{
+  "name": "contagios_total",
+  "version": "1.0.0",
+  "description": "mini-Api para número de contagios España",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielRuizMed/contagios_total.git"
+  },
+  "author": "DanielRuizMed",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DanielRuizMed/contagios_total/issues"
+  },
+  "homepage": "https://github.com/DanielRuizMed/contagios_total#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "grunt": "^1.3.0",
+    "grunt-mocha-test": "^0.13.3",
+    "mocha": "^8.2.1"
+  }
+}

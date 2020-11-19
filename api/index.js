@@ -14,5 +14,5 @@ module.exports = function handler(req, res) {
 		result = "No has indicado el parametro o no es el formato indicado: /api?ccaa=Andalucía"
 	}
 
-	res.status(200).json(req) 
+	res.status(200).json(result) 
 }
