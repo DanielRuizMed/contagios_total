@@ -1,7 +1,7 @@
 const datos = require("./datos.json")
 
 //funcion handler
-module.exports = (req, res) => {
+module.exports = function handler(req, res) {
 
 	if( Object.keys(req.query).length == 1 ){
 		
