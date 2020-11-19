@@ -1,4 +1,5 @@
 const datos = require("./datos.json")
+let estado = 400
 
 //funcion handler
 module.exports = function handler(req, res) {
@@ -6,6 +7,7 @@ module.exports = function handler(req, res) {
 	if( Object.keys(req.query).length == 1 ){
 		
 		result = datos.filter(it => it.ccaa === req.query.ccaa )[0]
+		estado = 200
 
 		if ( result == undefined )
 			result = "Esa comunidad autónoma no existe";
@@ -14,5 +16,5 @@ module.exports = function handler(req, res) {
 		result = "No has indicado el parametro o no es el formato indicado: /api?ccaa=Andalucía"
 	}
 
-	res.status(200).json(result) 
+	res.status(estado).json(result) 
 }

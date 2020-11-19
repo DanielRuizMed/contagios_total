@@ -5,21 +5,22 @@ const expect = require('chai').expect;
 chai.use(require('chai-http'));
 const url= 'https://contagios-total.vercel.app/api';
 
-var result;
-//console.log(chai.request(url).get('?ccaa=Andalucía').end());
+it('1.1 api?ccaa=Andalucía (provincia que si existe)', (done) => {
+    chai.request(url).get('?ccaa=Andalucia').end(function(err,res){
 
-describe('Consultar número de contagios, posibles o curados ', () => {
+        expect(res.body).to.have.property('ccaa').to.equal("Andalucia");
+        expect(res).to.have.status(200);
+        done();
+    })
 
-    it('1.1 api?ccaa=Andalucía', (done) => {
-        chai.request(url).get('?ccaa=Andalucia').end(function(err,res){
+});
 
-            expect(res.body).to.have.property('ccaa').to.equal("Andalucia");
-            expect(res).to.have.status(200);
-            done();
-        })
-        
-        console.log(result)
-       // .to.have.property('ccaa').to.be.equal("Andalucía");
-    });
+it('1.1 api?ccaa=Andalucía (provincia que si existe)', (done) => {
+    chai.request(url).get('?ccaa=Andalucia').end(function(err,res){
+
+        expect(res.body).to.have.property('ccaa').to.equal("Andalucia");
+        expect(res).to.have.status(200);
+        done();
+    })
 
 });
