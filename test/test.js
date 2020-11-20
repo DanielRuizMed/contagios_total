@@ -1,7 +1,7 @@
 let chai = require('chai');
 const expect = require('chai').expect;
 
-//usamos chaihttp para hacer peticiones a la API
+//usamos chaihttp para hacer peticiones a la API 
 chai.use(require('chai-http'));
 const url= 'https://c-t.vercel.app/api';
 
